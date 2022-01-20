@@ -51,7 +51,7 @@ class Program
     {
       var spotify = new SpotifyClient("YourAccessToken");
 
-      var track = await spotify.Tracks.Get("1s6ux0lNiTziSrd7iUAADH");
+      var track = await spotify.Tracks.Get("4cOdK2wGLETKBW3PvgPWqT");
       Console.WriteLine(track.Name);
     }
 }
@@ -97,6 +97,7 @@ var track = await spotify.Tracks.Get("1s6ux0lNiTziSrd7iUAADH", new TrackRequest{
 
 // Sometimes, query/body parameters are also required!
 var tracks = await spotify.Tracks.GetSeveral(new TracksRequest(new List<string> {
+  "4cOdK2wGLETKBW3PvgPWqT",
   "1s6ux0lNiTziSrd7iUAADH",
   "6YlOxoHWLjH6uVQvxUIUug"
 }));
